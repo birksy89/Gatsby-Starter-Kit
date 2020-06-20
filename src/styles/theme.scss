@@ -1,0 +1,13 @@
+//? These variables are used within SCSS / Bootstap
+//? Make sure to change anything in the sister file; "theme.js"
+
+//! This would be cool, but doesn't work with Styled Components ThemeProvider:
+//! https://til.hashrocket.com/posts/sxbrscjuqu-share-scss-variables-with-javascript
+
+$primary: tomato;
+
+$theme-colors: (
+  "primary": $primary,
+);
+
+@import "~bootstrap/scss/bootstrap";
