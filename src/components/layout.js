@@ -13,6 +13,10 @@ import Header from "./header"
 import Footer from "./footer"
 import { Container } from "react-bootstrap"
 
+import variables from "../styles/index.scss"
+
+console.log(variables)
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -27,6 +31,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+
+      <div style={{ background: "red" }}>Alpha</div>
+      <div style={{ background: variables.primary }}>Beta</div>
+      <div style={{ background: "red" }}>Charlie</div>
       <Container>
         <main>{children}</main>
       </Container>
